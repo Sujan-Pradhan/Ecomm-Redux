@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light      bg-secondary">
+      <nav className="navbar navbar-expand-lg navbar-light bg-secondary">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="#">
+          <Link className="navbar-brand" to="/">
             Redux Demo
           </Link>
           <button
