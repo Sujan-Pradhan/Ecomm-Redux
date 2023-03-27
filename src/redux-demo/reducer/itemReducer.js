@@ -35,6 +35,11 @@ const initialData = {
       itemImage:
         "https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-gold-220907_inline.jpg.large.jpg",
     },
+    {
+      itemId:5,
+      itemName:"Samsun S21 FE",
+      itemPrice:"83000",
+      itemImage:"https://hothardware.com/image/resize/?width=1170&height=1170&imageFile=/contentimages/Article/3172/content/big_samsung-galaxy-s21-fe-5g-back-side-view.jpg"}
   ],
 };
 

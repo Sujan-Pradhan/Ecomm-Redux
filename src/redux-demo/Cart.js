@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import { useSelector, useDispatch } from "react-redux";
+import Footer from "./Footer";
 const Cart = () => {
   const cart_item = useSelector((store) => store.cart);
   const cartArrayItem = cart_item.cartItems;
@@ -17,6 +18,7 @@ const Cart = () => {
               <table className="table table-bordered table-right">
                 <thead>
                   <tr>
+                    <th>SN</th>
                     <th>Name</th>
                     <th>Price</th>
                     <th>Image</th>
@@ -26,6 +28,7 @@ const Cart = () => {
                 <tbody>
                   {cartArrayItem.map((item, index) => (
                     <tr key={index}>
+                      <td>{index + 1}</td>
                       <td>{item.itemName}</td>
                       <id>Rs {item.itemPrice}</id>
                       <td>
@@ -52,6 +55,7 @@ const Cart = () => {
           </div>
         </div>
       )}
+      <Footer />
     </>
   );
 };
