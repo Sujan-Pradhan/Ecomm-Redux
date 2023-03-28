@@ -8,7 +8,7 @@ const ProductItem = ({ data }) => {
   const { itemImage, itemName, itemPrice } = data;
   const dispatch = useDispatch();
 
-  const notify = () => toast("Item added. !!!");
+  const notify = () => toast(`${itemName} added. !!!`);
   return (
     <>
       <div className="col" style={{ marginTop: "50px" }}>
