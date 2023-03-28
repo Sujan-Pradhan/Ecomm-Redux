@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { createAction } from "./utils/reducer/reducer.utils";
 
 const ProductItem = ({ data }) => {
   const { itemImage, itemName, itemPrice } = data;
@@ -24,7 +25,10 @@ const ProductItem = ({ data }) => {
             <button
               className="btn btn-warning"
               onClick={() => {
-                dispatch({ type: "ADD_TO_CART", payload: data });
+                dispatch(
+                  createAction("ADD_TO_CART",data)
+                  // { type: "ADD_TO_CART", payload: data }
+                  );
                 notify();
               }}
             >
