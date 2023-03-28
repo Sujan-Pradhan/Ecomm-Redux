@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import { useSelector, useDispatch } from "react-redux";
 import Footer from "./Footer";
+import { createAction } from "./utils/reducer/reducer.utils";
 const Cart = () => {
   const cart_item = useSelector((store) => store.cart);
   const cartArrayItem = cart_item.cartItems;
@@ -38,10 +39,13 @@ const Cart = () => {
                         <button
                           className="btn btn-danger"
                           onClick={() =>
-                            dispatch({
-                              type: "REMOVE_FROM_CART",
-                              payload: item,
-                            })
+                            dispatch(
+                              createAction("REMOVE_FROM_CART", item)
+                              //   {
+                              //   type: "REMOVE_FROM_CART",
+                              //   payload: item,
+                              // }
+                            )
                           }
                         >
                           Delete
